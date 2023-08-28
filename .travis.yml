@@ -1,23 +1,23 @@
 language: java
 jdk:
-  -openjdk8
+  - openjdk8
 
 branches:
   only:
-    -master
+    - master
 before_install:
-  -chmod +x gradlew
+  - chmod +x gradlew
 
 #Travis CI 서버의 Home
 cache:
   directories:
-    -'$HOME/.m2/repository'
-    -'$HOME/.gradle'
+    - '$HOME/.m2/repository'
+    - '$HOME/.gradle'
 script: "./gradlew clean build"
 
 #CI 실행 완료 시 메일로 알람
 notifications:
   email:
     recipients:
-      -mwilliam55@naver.com
+      - mwilliam55@naver.com
 
